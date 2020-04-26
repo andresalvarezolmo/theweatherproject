@@ -15,7 +15,7 @@ function searchCity()
 {
     var theCity = $("#city").val();
     var key = "a38656fcf967a388c6027b0920d8e2e8";
-
+    var counter = 0;
     $.ajax({
         type: "GET",
         url: "https://api.openweathermap.org/data/2.5/weather?q=" + theCity + "&appid=" + key,
@@ -32,12 +32,22 @@ function searchCity()
         {
             $("#wrongInput").css('display','none');
             console.log(response);
+            
+            $("#datos").prepend(
+                    '<div class="col-xs-12 col-sm-12 col-md-6 col-lg-3" id ="panels">' 
+                    +"<h4>In " + response.name +"</h4>"  
+                    +'<img src="https://www.countryflags.io/' + response.sys.country + '/flat/64.png">'
+                    + "<p>The temperature is " + Math.round(response.main.temp-273.15) +"°C" +"</p>"
+                    +"<p>The humidity is " + Math.round(response.main.humidity) +"%" +"</p>"
+                    + "<p>The wind is " + Math.round(response.wind.speed) +" km/h" +"</p>"
+                +'</div>'
+            );
 
-            $("#datos").prepend("<p>The temperature is " + Math.round(response.main.temp-273.15) +"°C" +"</p>");
-            $("#datos").prepend("<p>The humidity is " + Math.round(response.main.humidity) +"%" +"</p>");
-            $("#datos").prepend("<p>The wind is " + Math.round(response.wind.speed) +" km/h" +"</p>");
-            $("#datos").prepend('<img src="https://www.countryflags.io/' + response.sys.country + '/flat/64.png">');
-            $("#datos").prepend("<h4>In " + response.name +"</h4>");
+            // $("#datos").prepend("<p>The humidity is " + Math.round(response.main.humidity) +"%" +"</p>");
+            // $("#datos").prepend("<p>The wind is " + Math.round(response.wind.speed) +" km/h" +"</p>");
+            // $("#datos").prepend("<p>The temperature is " + Math.round(response.main.temp-273.15) +"°C" +"</p>");
+            // $("#datos").prepend('<img src="https://www.countryflags.io/' + response.sys.country + '/flat/64.png">');
+            // $("#datos").prepend("<h4>In " + response.name +"</h4>");
 
             document.getElementById("city").value = "";
         }

@@ -25,20 +25,22 @@
 </head>
 
 <body>
+    <div class="text-center">
         <h2>The Weather Project</h2>
         <br>
         <label for="city">City:</label>
         <input type="text" class="" id="city">
         <br><br>
-        <button type="button" class="btn btn-light" onclick="searchCity()">Search for city or country</button>
+        <button type="button" class="btn btn-light" onclick="searchCity()">Look for a place</button>
         <button type="button" class="btn btn-danger" onclick="clearLog()">Clear weather log</button>
         <hr>
         <p id="wrongInput">Error happened, enter valid input</p>
         <!-- <img src="https://www.countryflags.io/es/flat/64.png" alt="" id="myFlag"> -->
 
-        <div id="datos">
-            
+        <div class="container" id="s">
+            <div class="row" id="datos"></div>
         </div>
+    </div>
 </body>
 
 </html>
