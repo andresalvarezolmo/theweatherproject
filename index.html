@@ -1,9 +1,15 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!-- CSS -->
     <link rel="stylesheet" href="css/styles.css">
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
     <!-- Jquery -->
     <script src="js/jquery/jquery-3.5.0.min.js"></script>
     <!-- UI -->
@@ -17,20 +23,22 @@
     <link rel="icon" type="image.png" href="images/logo.png">
     <title>The weather project</title>
 </head>
+
 <body>
-    <h2>The weather project</h2>
-    <label for="city">City:</label>
-    <input type="text" id="city">
-    <button onclick="searchCity()">Search for city or country</button>
-    <button onclick="clearLog()">Clear weather log</button>
+        <h2>The weather project</h2>
+        <br>
+        <label for="city">City:</label>
+        <input type="text" class="" id="city">
+        <br><br>
+        <button type="button" class="btn btn-light" onclick="searchCity()">Search for city or country</button>
+        <button type="button" class="btn btn-danger" onclick="clearLog()">Clear weather log</button>
+        <hr>
+        <p id="wrongInput">Error happened, enter valid input</p>
+        <!-- <img src="https://www.countryflags.io/es/flat/64.png" alt="" id="myFlag"> -->
 
-    <p id="wrongInput">Error happened, enter valid input</p>
-
-    <!-- <img src="https://www.countryflags.io/es/flat/64.png" alt="" id="myFlag"> -->
-
-    <div id="datos">
-
-    </div>
-</form>
+        <div id="datos">
+            
+        </div>
 </body>
+
 </html>
