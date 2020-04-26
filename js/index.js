@@ -37,7 +37,7 @@ function searchCity()
             $("#datos").prepend("<p>The humidity is " + Math.round(response.main.humidity) +"%" +"</p>");
             $("#datos").prepend("<p>The wind is " + Math.round(response.wind.speed) +" km/h" +"</p>");
             $("#datos").prepend('<img src="https://www.countryflags.io/' + response.sys.country + '/flat/64.png">');
-            $("#datos").prepend("<h4>You have selected " + response.name +"</h4>");
+            $("#datos").prepend("<h4>In " + response.name +"</h4>");
 
             document.getElementById("city").value = "";
         }
