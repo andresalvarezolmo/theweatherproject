@@ -25,10 +25,19 @@ function searchCity() {
     $.getJSON("https://api.openweathermap.org/data/2.5/weather?q=" + theCity + "&appid=" + key, function (response) {
         console.log(response);
         console.log(response.weather[0].main);
+        var newFlag = "https://www.countryflags.io/" + response.sys.country + "/flat/64.png";
+        // console.log(response.sys.country);
+        // $("#datos").append("<img src='https://www.countryflags.io/' + 'GB' + '/flat/64.png'>");
         $("#datos").append("<h3>Your selected city is " + response.name +"</h3>");
+        $("#datos").append('<img src="https://www.countryflags.io/' + response.sys.country + '/flat/64.png">');
+
         $("#datos").append("<p>The temperature right now is " + Math.round(response.main.temp-273.15) +"°C" +"</p>");
 
 
         document.getElementById("city").value = "";
     });
+}
+
+function clearLog(){
+    document.getElementById("datos").innerHTML = "";
 }
