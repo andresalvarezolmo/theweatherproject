@@ -34,7 +34,7 @@ function searchCity()
             console.log(response);
             
             $("#datos").prepend(
-                    '<div class="col-xs-12 col-sm-12 col-md-6 col-lg-3" id ="panels">' 
+                    '<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3" id ="panels">' 
                     +"<h4>In " + response.name +"</h4>"  
                     +'<img src="https://www.countryflags.io/' + response.sys.country + '/flat/64.png">'
                     + "<p>The temperature is " + Math.round(response.main.temp-273.15) +"°C" +"</p>"
