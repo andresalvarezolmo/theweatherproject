@@ -2,17 +2,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- Jquery -->
-        <script src="js/jquery/jquery-3.5.0.min.js"></script>
-        <!-- UI -->
-        <script src="js/jquery/jquery-ui-1.12.1/jquery-ui.min.js"></script>
-        <script src="js/jquery/jquery-ui-1.12.1/jquery-ui.structure.min.css"></script>
-        <script src="js/jquery/jquery-ui-1.12.1/jquery-ui.theme.min.css"></script>
-        <!-- Touch Punch -->
-        <script src="js/jquery/jquery.ui.touch-punch.min.js"></script>
-        <!-- JS -->
-        <script src="js/index.js"></script>
-        <link rel="icon" type="image.png" href="images/logo.png">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Jquery -->
+    <script src="js/jquery/jquery-3.5.0.min.js"></script>
+    <!-- UI -->
+    <script src="js/jquery/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <script src="js/jquery/jquery-ui-1.12.1/jquery-ui.structure.min.css"></script>
+    <script src="js/jquery/jquery-ui-1.12.1/jquery-ui.theme.min.css"></script>
+    <!-- Touch Punch -->
+    <script src="js/jquery/jquery.ui.touch-punch.min.js"></script>
+    <!-- JS -->
+    <script src="js/index.js"></script>
+    <link rel="icon" type="image.png" href="images/logo.png">
     <title>The weather project</title>
 </head>
 <body>
@@ -20,6 +22,7 @@
     <label for="city">City:</label>
     <input type="text" id="city">
     <button onclick="searchCity()">Search for city or country</button>
+    <p id="wrongInput">Error happened, enter valid input</p>
     <br>
 
     <!-- <img src="https://www.countryflags.io/es/flat/64.png" alt="" id="myFlag"> -->
