@@ -41,9 +41,11 @@ function searchCity()
                     +"<p>The humidity is " + Math.round(response.main.humidity) +"%" +"</p>"
                     + "<p>The wind is " + Math.round(response.wind.speed) +" km/h" +"</p>"
                     + "<button class='btn btn-danger' onclick = datos.removeChild(this.parentNode)>Delete</button>"
+                    + "<br><br>"
                     // + "<button class='btn btn-danger' onclick = console.log(this.parentNode)>Delete</button>"
                 +'</div>'
             );
+            // document.getElementById("city").value = "";
 
             //Understanding parent and child node
 
@@ -56,7 +58,6 @@ function searchCity()
             // mybutton.innerHTML = "Delete city";
             // mybutton.onclick = () => datos.removeChild(mybutton.parentNode);
             // container.appendChild(mybutton);
-            // document.getElementById("city").value = "";
         }
     });
 }
