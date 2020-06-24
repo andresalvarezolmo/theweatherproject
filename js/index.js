@@ -45,7 +45,7 @@ function searchCity()
                     // + "<button class='btn btn-danger' onclick = console.log(this.parentNode)>Delete</button>"
                 +'</div>'
             );
-            // document.getElementById("city").value = "";
+            document.getElementById("city").value = "";
 
             //Understanding parent and child node
 
